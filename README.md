@@ -40,4 +40,3 @@ Successfully migrated computationally intensive mesh optimization pipeline from 
 
 ---
 
-## Technical Stack
