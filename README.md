@@ -1,46 +1,44 @@
-# LungCT Medical Imaging Pipeline
+# LungCT Medical Imaging Pipeline - GPU Acceleration
 
-**Final Year Project - NUST CEME, Computer Engineering**
+**Final Year Project | NUST CEME, Computer Engineering**
 
-## Project Scope
-3D lung mesh reconstruction from CT DICOM data with GPU-accelerated post-processing.
+## Project Overview
 
-## Key Achievement: CPU-to-GPU Migration
+High-performance 3D lung mesh reconstruction pipeline for CT medical imaging with GPU-accelerated post-processing.
 
-Migrated mesh optimization pipeline from sequential CPU processing to parallel CUDA implementation.
+### Key Achievement: CPU-to-GPU Migration
 
-### Performance Impact
-- **Optimization Stage:** 48-67s (CPU) → 2.8-4.7s (GPU)
-- **Speedup:** ~17x on mesh post-processing
-- **Hardware:** NVIDIA RTX 4050 Laptop GPU
-- **Dataset:** 14M vertices, 28M triangles (lung vessel mesh)
+Successfully migrated computationally intensive mesh optimization pipeline from sequential CPU processing to parallel CUDA implementation.
 
-### Technical Stack
-- **Languages:** C++17, CUDA
-- **Libraries:** VTK 9.4, CUDA Toolkit 12.x
-- **Build System:** CMake (conditional CUDA compilation)
-- **Platform:** Windows 11, Visual Studio 2022
-
-### Architecture
-```
-DICOM → Volume Generation → Mesh Extraction → GPU Optimization → Visualization
-                                                ├─ CUDA kernels
-                                                ├─ Parallel adjacency
-                                                └─ Feature-aware smoothing
-```
-
-### Repository Structure
-```
-├── kernel/          # CUDA kernels (private)
-├── src/             # C++ implementation (private)
-├── include/         # Headers (private)
-└── docs/            # Performance documentation
-```
-
-**Note:** Core implementation files are kept private as this is ongoing research work.
+**Performance Impact:**
+- **Pipeline Time:** 27-28 minutes (CPU) → 7.5 minutes (GPU)
+- **Overall Speedup:** **3.7x end-to-end acceleration**
+- **Optimization Stage:** ~20 minutes (CPU) → 2.5 minutes (GPU) 
+- **Speedup on Optimization:** **~8x faster**
 
 ---
 
-**Author:** Team Ryft  
-**Specialization:** GPU Acceleration, Medical Imaging, CUDA Optimization  
-**Institution:** NUST College of Electrical & Mechanical Engineering
+## Hardware Configuration
+
+| Component | Specification |
+|-----------|--------------|
+| **GPU** | NVIDIA GeForce RTX 4050 Laptop (6GB VRAM) |
+| **CPU** | Intel Core i5 13th Generation |
+| **RAM** | 16GB DDR5 |
+| **Graphics API** | VTK 9.5 |
+| **CUDA Runtime** | 12.x |
+| **Platform** | Windows 11, Visual Studio 2022 |
+
+---
+
+## Dataset Characteristics
+
+- **Test File:** 3GB medical CT volume (lung vessel data)
+- **Volume Dimensions:** 442×442×344 voxels
+- **Voxel Spacing:** 0.9mm isotropic
+- **Output Mesh:** ~14M vertices, ~28M triangles
+- **Format:** DICOM → MHA → OBJ/STL
+
+---
+
+## Technical Stack
