@@ -1,10 +1,9 @@
 # LungCT Medical Imaging Pipeline - GPU Acceleration
 
-**Final Year Project | NUST CEME, Computer Engineering**
 
 ## Project Overview
 
-High-performance 3D lung mesh reconstruction pipeline for CT medical imaging with GPU-accelerated post-processing.
+High-performance 3D lung mesh reconstruction pipeline for CT medical imaging with GPU-accelerated processing.
 
 ### Key Achievement: CPU-to-GPU Migration
 
