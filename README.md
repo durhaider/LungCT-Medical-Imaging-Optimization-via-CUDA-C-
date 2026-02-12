@@ -98,10 +98,10 @@ cmake --build build --config Release
 
 ## Validation
 
-✅ **Geometric Accuracy:** Hausdorff distance < 0.5mm vs CPU reference  
-✅ **Tested on:** 376 subjects from Lung-PET-CT-Dx dataset  
-✅ **Memory Safe:** CUDA memcheck verified, no leaks  
-✅ **Cross-Platform:** Windows MSVC ✓, Linux GCC ✓
+ **Geometric Accuracy:** Hausdorff distance < 0.5mm vs CPU reference  
+ **Tested on:** 376 subjects from Lung-PET-CT-Dx dataset  
+ **Memory Safe:** CUDA memcheck verified, no leaks  
+ **Cross-Platform:** Windows MSVC ✓, Linux GCC ✓
 
 ---
 
